@@ -8,8 +8,8 @@ load_dotenv()
 
 class Var(object):
     MULTI_CLIENT = False
-    API_ID = int(environ.get("API_ID"))
-    API_HASH = str(environ.get("API_HASH"))
+    API_ID = int(environ.get("API_ID" , "0"))
+    API_HASH = str(environ.get("API_HASH" , "0"))
     BOT_TOKEN = str(environ.get("BOT_TOKEN"))
     SLEEP_THRESHOLD = int(environ.get("SLEEP_THRESHOLD", "60"))  # 1 minute
     WORKERS = int(environ.get("WORKERS", "6"))  # 6 workers = 6 commands at once
